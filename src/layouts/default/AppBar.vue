@@ -23,7 +23,7 @@ const links = [
       <router-link to="/" class="nav-link">King's Bakery</router-link>
     </v-app-bar-title>
 
-    <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
+    <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up ma-12" />
 
     <nav class="nav-links nav-links hidden-sm-and-down">
       <router-link v-for="link in links" :key="link.to" :to="link.to" class="nav-link">{{ link.text }}</router-link>
@@ -46,12 +46,6 @@ const links = [
   justify-content: center;
   align-items: center;
   width: 60vw;
-}
-
-.img-crown {
-  height: 3rem;
-  width: 3rem;
-  margin-left: 5rem;
 }
 
 .my-font {
