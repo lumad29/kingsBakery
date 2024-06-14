@@ -3,13 +3,13 @@
 </script>
 
 <template>
-    <div class="products-view">
-        <h1>This is the Our Products</h1>
+    <div class="stores-view">
+        <h1>This is the Stores</h1>
     </div>
 </template>
 
 <style>
-.products-view {
+.stores-view {
     height: 100vh;
     display: flex;
     justify-content: center;

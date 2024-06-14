@@ -1,8 +1,8 @@
 <template>
   <v-app>
+    <AppBar />
     <v-main>
-      <AppBar />
-      <RouterView /> <!-- parece que esto renderiza lo del router-->
+      <RouterView /> <!--esto renderiza lo del router-->
     </v-main>
   </v-app>
 </template>

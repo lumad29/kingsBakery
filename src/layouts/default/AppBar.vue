@@ -3,20 +3,30 @@ import { ref } from 'vue'
 
 const drawer = ref(false)
 
+
 const links = [
   { to: '/', text: 'Home' },
+  { to: '/stores', text: 'Stores' },
+  { to: '/products', text: 'Products' },
   { to: '/about', text: 'About' },
-  { to: '/products', text: 'Our Products' },
-  { to: '/work', text: 'Work With Us' }
+  { to: '/work', text: 'Work with us' }
 ];
+
+const items = [
+  {
+    title: 'uno',
+    value: 'uno',
+  },
+  {
+    title: 'dos',
+    value: 'dos',
+  },
+]
+
 </script>
 
 <template>
   <v-app-bar :elevation="0" color="blue-grey-darken-3">
-    <!-- <router-link to="/" class="nav-link">
-      <img src="/src/assets/crown.png" alt="crown-logo" class="img-crown">
-    </router-link> -->
-
 
     <v-app-bar-title class=" hidden-sm-and-downx my-font font-weight-bold">
 
@@ -27,10 +37,16 @@ const links = [
 
     <nav class="nav-links nav-links hidden-sm-and-down">
       <router-link v-for="link in links" :key="link.to" :to="link.to" class="nav-link">{{ link.text }}</router-link>
-      <!--<router-link to="/" class="nav-link">Home</router-link>-->
     </nav>
 
   </v-app-bar>
+
+  <v-navigation-drawer v-model="drawer" color="blue-grey-darken-3" temporary>
+    <v-list :items="items">
+      <v-list-item v-for="link in links" :key="link.to" :to="link.to" class="nav-link">{{ link.text }}</v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+
 </template>
 
 <style>
@@ -45,7 +61,7 @@ const links = [
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 65vw;
 }
 
 .my-font {

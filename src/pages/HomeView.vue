@@ -1,4 +1,7 @@
 <script setup>
+import StoresView from "@/pages/StoresView .vue";
+import { ref } from 'vue';
+
 
 </script>
 
@@ -19,9 +22,8 @@
             <h1>lado b</h1>
         </v-col>
     </v-row>
-    <v-row>
-        otra row
-    </v-row>
+
+    <!-- <StoresView /> -->
 
 </template>
 
