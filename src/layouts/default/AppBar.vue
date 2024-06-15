@@ -1,15 +1,16 @@
 <script setup>
 import { ref } from 'vue'
+import { useGoTo } from 'vuetify/lib/framework.mjs';
 
 const drawer = ref(false)
 
 
 const links = [
-  { to: '/', text: 'Home' },
-  { to: '/stores', text: 'Stores' },
-  { to: '/products', text: 'Products' },
-  { to: '/about', text: 'About' },
-  { to: '/work', text: 'Work with us' }
+  { to: '#target-home', text: 'Home' },
+  { to: '#target-stores', text: 'Stores' },
+  { to: '#target-products', text: 'Products' },
+  { to: '#target-about', text: 'About' },
+  { to: '#target-work', text: 'Work with us' }
 ];
 
 const items = [
@@ -23,6 +24,12 @@ const items = [
   },
 ]
 
+const goTo = useGoTo()
+
+const onClick = (targetId) => {
+  goTo(targetId)
+}
+
 </script>
 
 <template>
@@ -35,15 +42,19 @@ const items = [
 
     <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up ma-12" />
 
+    <!-- <v-btn @click="onClick('#target-about')">GoTo Stores</v-btn> -->
+
     <nav class="nav-links nav-links hidden-sm-and-down">
-      <router-link v-for="link in links" :key="link.to" :to="link.to" class="nav-link">{{ link.text }}</router-link>
+      <div v-for="link in links" :key="link.to" @click="goTo(link.to)" class="nav-link">{{ link.text }}</div>
     </nav>
 
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" color="blue-grey-darken-3" temporary>
+  <!--navigation drawer-->
+  <v-navigation-drawer v-model="drawer" color="blue-grey-darken-3" location="top" :mobile-breakpoint="0" permanent>
     <v-list :items="items">
-      <v-list-item v-for="link in links" :key="link.to" :to="link.to" class="nav-link">{{ link.text }}</v-list-item>
+      <v-list-item v-for="link in links" :key="link.to" @click="goTo(link.to)" class="nav-link">{{ link.text
+        }}</v-list-item>
     </v-list>
   </v-navigation-drawer>
 
@@ -54,6 +65,7 @@ const items = [
   text-decoration: none;
   color: white;
   margin: 0 1rem 0 1rem;
+  cursor: pointer;
 }
 
 .nav-links {

@@ -1,15 +1,12 @@
 <script setup>
-import StoresView from "@/pages/StoresView .vue";
-import { ref } from 'vue';
-
 
 </script>
 
 <template>
 
-    <v-row class="home-view pa-6">
-        <v-col class="pa-4 ma-4" cols="8">
-            <div class="my-4">
+    <v-row class="home-view pa-6" id="target-home">
+        <v-col class="pa-8 ma-8" cols="8">
+            <div class="my-6">
                 <h1 class="custom-font-size my-4">We are bread experts </h1>
                 <p class="custom-font-size-2">
                     Enjoy freshly baked bread at our bakery! From hearty whole grain loaves to fluffy baguettes,
@@ -19,12 +16,13 @@ import { ref } from 'vue';
             </div>
         </v-col>
         <v-col>
-            <h1>lado b</h1>
+            <!-- <h1>lado b</h1> -->
         </v-col>
     </v-row>
-
-    <!-- <StoresView /> -->
-
+    <StoresView id="target-stores" />
+    <ProductsView id="target-products" />
+    <AboutView id="target-about" />
+    <WorkView id="target-work" />
 </template>
 
 <style scoped>
