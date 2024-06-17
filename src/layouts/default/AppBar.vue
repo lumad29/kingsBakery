@@ -13,17 +13,8 @@ const links = [
   { to: '#target-work', text: 'Work with us' }
 ];
 
-const items = [
-  {
-    title: 'uno',
-    value: 'uno',
-  },
-  {
-    title: 'dos',
-    value: 'dos',
-  },
-]
 
+// esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 const goTo = useGoTo()
 
 const onClick = (targetId) => {

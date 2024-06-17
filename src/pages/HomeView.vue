@@ -5,9 +5,9 @@
 <template>
 
     <v-row class="home-view pa-6" id="target-home">
-        <v-col class="pa-8 ma-8" cols="8">
-            <div class="my-6">
-                <h1 class="custom-font-size my-4">We are bread experts </h1>
+        <v-col class="pa-8 ma-8" cols="12" md="8">
+            <div class="ml-6">
+                <h1 class="custom-font-sizex my-4">We are bread experts</h1>
                 <p class="custom-font-size-2">
                     Enjoy freshly baked bread at our bakery! From hearty whole grain loaves to fluffy baguettes,
                     we offer a wide variety to satisfy your cravings. Whether it' s a daily loaf or a special treat,
@@ -34,12 +34,11 @@
     background-color: #37474F;
     color: white;
     /* background-image: url('/src/assets/bg-bread-2.jpeg'); */
-    background-image: linear-gradient(rgba(81, 81, 81, 0.034), rgba(66, 65, 65, 0.624)), url('/src/assets/bg-bread-2.jpeg');
+    background-image: linear-gradient(rgba(81, 81, 81, 0.034), rgba(66, 65, 65, 0.624)), url('/assets/bg-bread-2.jpeg');
     background-size: cover;
     background-position: right;
     position: relative;
 }
-
 
 .custom-font-size {
     font-size: 3rem;
