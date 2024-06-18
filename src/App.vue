@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppBar />
-    <v-main>
+    <v-main scrollable>
       <RouterView /> <!--esto renderiza lo del router-->
     </v-main>
   </v-app>
