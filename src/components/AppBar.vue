@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useGoTo } from 'vuetify/lib/framework.mjs';
+import { useGoTo } from 'vuetify';
 
 const drawer = ref(false)
 
@@ -17,7 +17,8 @@ const links = [
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 const goTo = useGoTo()
 
-const onClick = (targetId) => {
+const linkToPage = (targetId) => {
+  console.log('hola');
   goTo(targetId)
 }
 
@@ -33,10 +34,10 @@ const onClick = (targetId) => {
 
     <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up ma-12" />
 
-    <!-- <v-btn @click="onClick('#target-about')">GoTo Stores</v-btn> -->
+    <!-- <v-btn @click="linkToPage('#target-about')">GoTo Stores</v-btn> -->
 
     <nav class="nav-links nav-links hidden-sm-and-down">
-      <div v-for="link in links" :key="link.to" @click="goTo(link.to)" class="nav-link">{{ link.text }}</div>
+      <div v-for="link in links" :key="link.to" @click="linkToPage(link.to)" class="nav-link">{{ link.text }}</div>
     </nav>
 
   </v-app-bar>

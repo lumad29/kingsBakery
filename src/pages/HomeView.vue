@@ -3,7 +3,6 @@
 </script>
 
 <template>
-
     <v-row class="home-view pa-6" id="target-home">
         <v-col class="pa-8 ma-8" cols="12" md="8">
             <div class="ml-6">
