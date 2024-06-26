@@ -3,12 +3,14 @@
 </script>
 
 <template>
-    <div class="products-view">
-        <h1>This is the Our Products</h1>
-    </div>
+    <v-card max-height="100vh" class="fill-height rounded-0" color="#37474F" flat>
+        <v-row class="mt-16" align="start" justify="center">
+            <h1>This is the Our Products</h1>
+        </v-row>
+    </v-card>
 </template>
 
-<style>
+<!-- <style>
 .products-view {
     height: 100vh;
     display: flex;
@@ -17,4 +19,4 @@
     background-color: #37474F;
     color: white;
 }
-</style>
+</style> -->

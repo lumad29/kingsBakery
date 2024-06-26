@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useGoTo } from 'vuetify';
-
+// :items="items"
 const drawer = ref(false)
 
 
@@ -15,11 +15,12 @@ const links = [
 
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
-const goTo = useGoTo()
+const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
 
 const linkToPage = (targetId) => {
-  console.log('hola');
-  goTo(targetId)
+  console.log('si');
+  drawer.value = false
+  goTo(targetId) // va hacia. es mi evento con un paraemtro de target
 }
 
 </script>
@@ -37,6 +38,7 @@ const linkToPage = (targetId) => {
     <!-- <v-btn @click="linkToPage('#target-about')">GoTo Stores</v-btn> -->
 
     <nav class="nav-links nav-links hidden-sm-and-down">
+      <!--llamo al evento onclick y le paso el paramtro de link que es mi array de objetos y to que es el el key -->
       <div v-for="link in links" :key="link.to" @click="linkToPage(link.to)" class="nav-link">{{ link.text }}</div>
     </nav>
 
@@ -44,8 +46,8 @@ const linkToPage = (targetId) => {
 
   <!--navigation drawer-->
   <v-navigation-drawer v-model="drawer" color="blue-grey-darken-3" location="top" :mobile-breakpoint="0" permanent>
-    <v-list :items="items">
-      <v-list-item v-for="link in links" :key="link.to" @click="goTo(link.to)" class="nav-link">{{ link.text
+    <v-list>
+      <v-list-item v-for="link in links" :key="link.to" @click="linkToPage(link.to)" class="nav-link">{{ link.text
         }}</v-list-item>
     </v-list>
   </v-navigation-drawer>
