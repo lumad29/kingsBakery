@@ -18,7 +18,6 @@ const links = [
 const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
 
 const linkToPage = (targetId) => {
-  console.log('si');
   drawer.value = false
   goTo(targetId) // va hacia. es mi evento con un paraemtro de target
 }
