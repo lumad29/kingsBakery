@@ -24,7 +24,7 @@ const selectedProductText = computed(() => {
     <v-card color="#37474F" rounded="0" class="pt-16" flat>
         <v-sheet class=" mx-auto mt-18" elevation="0" max-width="1000" color="#37474F">
 
-            <v-slide-group v-model="model" class="pa-4" show-arrows>
+            <v-slide-group v-model="model" class="pa-4" show-arrows mandatory>
                 <v-slide-group-item v-for="product in products" :key="product.id" v-slot="{ toggle }">
 
                     <v-card :class="['ma-2']" color="grey" height="400" width="300" @click="toggle"
@@ -41,7 +41,7 @@ const selectedProductText = computed(() => {
             </v-slide-group>
 
             <v-expand-transition>
-                <v-sheet v-if="model != null" height="160" color="#37474F">
+                <v-sheet v-if="model != null" height="250" color="#37474F">
                     <div class="d-flex fill-height align-center justify-center">
                         <v-card :title="selectedProduct" :text="selectedProductText" color="#37474F" elevation="0"
                             max-width="87%">
