@@ -1,12 +1,9 @@
 <script setup>
-// import { ref } from 'vue';
-
-// const h1Key = ref(100)
 
 </script>
 
 <template>
-    <v-card min-height="100" max-height="100%" class="fill-heightx rounded-0" color="#37474F" flat>
+    <v-card min-height="100" max-height="100%" class="fill-heightx rounded-0 pt-5" color="#37474F" flat>
         <v-row class="mt-16" align="start" justify="center">
             <v-col cols="11" md="5" v-motion-slide-visible-left :delay="80" :duration="1000">
                 <!-- <v-btn @click="h1Key++">{{ h1Key }}re-render title</v-btn> -->
@@ -75,6 +72,7 @@ ul li {
 .text-margin {
     margin-left: 1rem;
 }
+
 
 /* .pic-container {
     background-image: linear-gradient(to bottom, rgba(45, 44, 44, 0.200), rgba(66, 65, 65, 0.6)), url('/src/assets/bread-shop-1.png');

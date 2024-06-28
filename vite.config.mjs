@@ -13,10 +13,14 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    exclude: ['vuetify'],
+  },
   plugins: [
     VueRouter(),
     Layouts(),
     Vue({
+      script: { defineModel: true },
       template: { transformAssetUrls }
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
@@ -26,7 +30,7 @@ export default defineConfig({
         configFile: 'src/styles/settings.scss',
       },
     }),
-    Components({
+    Components({ // todo lo que ponga aca se autoimporta
       dts: true
     }),
     Fonts({

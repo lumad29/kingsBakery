@@ -39,7 +39,7 @@
 
 <style scoped>
 .home-view {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: end;
     align-items: center;

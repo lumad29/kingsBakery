@@ -14,6 +14,7 @@ const links = [
 ];
 
 
+
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
 

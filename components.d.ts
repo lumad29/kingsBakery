@@ -11,6 +11,7 @@ declare module 'vue' {
     AppBar: typeof import('./src/components/AppBar.vue')['default']
     HomeView: typeof import('./src/components/HomeView.vue')['default']
     OtroComponente: typeof import('./src/components/OtroComponente.vue')['default']
+    ProductsSlide: typeof import('./src/components/ProductsSlide.vue')['default']
     ProductsView: typeof import('./src/components/ProductsView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
