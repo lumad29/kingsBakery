@@ -7,7 +7,7 @@ const products = [
         id: 'breads',
         name: 'Breads',
         src: '/assets/bread-group.jpg',
-        text: 'Our bread is baked fresh every morning using the best ingredients. We have everything from classic sourdough to unique artisan loaves. Each slice is tasty and wholesome, perfect for sandwiches, meals, or just with butter. Enjoy the homemade goodness in every bite',
+        text: `Our bread is baked fresh every morning with the best ingredients. From classic sourdough to unique artisan loaves, each slice is perfect for sandwiches, meals, or just with butter. Enjoy the homemade goodness in every bite.`,
     },
     {
         id: 'pastries',
@@ -19,7 +19,7 @@ const products = [
         id: 'cookies',
         name: 'Cookies',
         src: '/assets/cookies.jpg',
-        text: 'Welcome to our cozy corner of homemade delights! Our cookies are crafted with love and baked to perfection, just like grandma used to make. Dive into a world of crunchy edges, gooey centers, and flavors that hug your taste buds. Whether you are a chocolate chip fanatic or oatmeal raisin enthusiast, there is a treat here to brighten your day.'
+        text: `Welcome to our cozy corner of homemade delights! Our cookies, crafted with love and baked to perfection, offer crunchy edges, gooey centers, and delightful flavors. Whether you love chocolate chip or oatmeal raisin, there's a treat here for you.`
     },
     {
         id: 'cake',
