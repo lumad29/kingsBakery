@@ -1,4 +1,5 @@
 <script setup>
+
 const model = defineModel() // el v-model se recibe con defineModel()
 
 const props = defineProps({
@@ -25,18 +26,18 @@ const selectedProductText = computed(() => {
         <v-sheet class=" mx-auto mt-18" elevation="0" max-width="1000" color="#37474F">
 
             <v-slide-group v-model="model" class="pa-4" show-arrows mandatory>
-                <v-slide-group-item v-for="product in products" :key="product.id" v-slot="{ toggle }">
+                <v-slide-group-item v-for="product in products" :key="product.id" v-slot="{ isSelected, toggle }">
 
-                    <v-card :class="['ma-2']" color="grey" height="400" width="300" @click="toggle"
-                        :image="product.src">
+                    <v-card :class="['ma-2']" height="400" width="300" @click="toggle">
 
-                        <!-- <div class=" d-flex fill-height align-center justify-center">
-                            <v-img src="/assets/bread-1.jpg"
-                                gradient="to bottom, rgba(150, 150, 150, 0.2), rgba(34, 34, 34, 0.5)" />
-                        </div> -->
-
+                        <v-img :src="product.src" height="100%" cover
+                            :gradient="!isSelected ? 'to bottom, rgba(0,0,0,.6), rgba(0,0,0,.5)' : ''">
+                            <div v-if="product.name && isSelected" class="pa-2 bg-grey">
+                                {{ product.name }}
+                            </div>
+                        </v-img>
                     </v-card>
-
+                    <!--:image="product.src"-->
                 </v-slide-group-item>
             </v-slide-group>
 
@@ -46,7 +47,9 @@ const selectedProductText = computed(() => {
                         <v-card :title="selectedProduct" :text="selectedProductText" color="#37474F" elevation="0"
                             max-width="87%">
                             <div class="mx-4">
-                                <v-btn variant="outlined" size="small">see all</v-btn>
+                                <router-link class="router-link-custom" to="/pastries">
+                                    <v-btn variant="outlined" size="small">see all</v-btn>
+                                </router-link>
                             </div>
                         </v-card>
                     </div>
@@ -55,3 +58,10 @@ const selectedProductText = computed(() => {
         </v-sheet>
     </v-card>
 </template>
+
+<style scoped>
+.router-link-custom {
+    text-decoration: none;
+    color: inherit;
+}
+</style>

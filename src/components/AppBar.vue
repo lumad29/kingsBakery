@@ -1,9 +1,7 @@
 <script setup>
-import { ref } from 'vue'
 import { useGoTo } from 'vuetify';
 // :items="items"
 const drawer = ref(false)
-
 
 const links = [
   { to: '#target-home', text: 'Home' },
@@ -12,8 +10,6 @@ const links = [
   { to: '#target-about', text: 'About' },
   { to: '#target-work', text: 'Work with us' }
 ];
-
-
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
 const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available

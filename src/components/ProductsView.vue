@@ -1,6 +1,6 @@
 <script setup>
 
-const model = ref(null)
+const model = ref(0)
 
 const products = [
     {

@@ -22,8 +22,7 @@
                         <v-col class="my-10">
                             <ul class="list-icons">
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />Elizabeth St</li>
-                                <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />84-86 Petty France
-                                </li>
+                                <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />20 Brewer Street</li>
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />10-12 Old Town</li>
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />12C Lyndhurst Rd</li>
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />3 Wren Ave</li>
@@ -33,7 +32,7 @@
                             <ul class="list-icons">
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />612 Lordship</li>
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />89 Nightingale</li>
-                                <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />Rushey Grn</li>
+                                <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />28-30 Cale Street</li>
                                 <li><v-icon>mdi-map-marker</v-icon><span class="text-margin" />Highgate Rd</li>
                             </ul>
                         </v-col>
@@ -42,8 +41,8 @@
             </v-col>
             <v-col class="fill-height" cols="11" md="5">
                 <div>
-                    <v-img src="/assets/bread-shop-1.png" height="100%" class="mb-4"
-                        gradient="to bottom, rgba(150, 150, 150, 0.3), rgba(34, 34, 34, 0.4)" />
+                    <v-img src="/assets/bread-shop-1.png" height="100%" class="mb-4" />
+                    <!-- gradient="to bottom, rgba(150, 150, 150, 0.3), rgba(34, 34, 34, 0.4)"-->
                     <v-img src="/public/assets/bg-bread-3.png" />
                 </div>
             </v-col>
@@ -61,10 +60,6 @@ ul li {
     color: white;
 }
 
-/* .img-opacity {
-    opacity: 0.7;
-} */
-
 .list-icons {
     list-style-type: none;
 }
@@ -72,16 +67,6 @@ ul li {
 .text-margin {
     margin-left: 1rem;
 }
-
-
-/* .pic-container {
-    background-image: linear-gradient(to bottom, rgba(45, 44, 44, 0.200), rgba(66, 65, 65, 0.6)), url('/src/assets/bread-shop-1.png');
-    height: 30rem;
-    width: 20rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}  */
 
 .custom-font {
     line-height: 2.2;
