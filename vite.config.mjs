@@ -14,7 +14,7 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   optimizeDeps: {
-    exclude: ['vuetify'],
+    exclude: ['vuetify', '@vueuse/router',],
   },
   plugins: [
     VueRouter(),
@@ -45,6 +45,9 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        {
+          'vue-router/auto': ['useRoute', 'useRouter'],
+        },
       ],
       eslintrc: {
         enabled: true,

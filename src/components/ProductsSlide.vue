@@ -19,6 +19,10 @@ const selectedProductText = computed(() => {
 })
 
 
+const selectedProductId = computed(() => {
+    return props.products[model.value].id
+})
+
 </script>
 
 <template>
@@ -32,7 +36,7 @@ const selectedProductText = computed(() => {
 
                         <v-img :src="product.src" height="100%" cover
                             :gradient="!isSelected ? 'to bottom, rgba(0,0,0,.6), rgba(0,0,0,.5)' : ''">
-                            <div v-if="product.name && isSelected" class="pa-2 bg-grey">
+                            <div v-if="product.name && isSelected" class="pa-2 bg-grey text-center">
                                 {{ product.name }}
                             </div>
                         </v-img>
@@ -47,7 +51,7 @@ const selectedProductText = computed(() => {
                         <v-card :title="selectedProduct" :text="selectedProductText" color="#37474F" elevation="0"
                             max-width="87%">
                             <div class="mx-4">
-                                <router-link class="router-link-custom" to="/test-1">
+                                <router-link class="router-link-custom" :to="`/product/${selectedProductId}`">
                                     <v-btn variant="outlined" size="small">see all</v-btn>
                                 </router-link>
                             </div>
