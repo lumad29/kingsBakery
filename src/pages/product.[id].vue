@@ -12,4 +12,7 @@ const product = computed(() => {
 
 <template>
     <h1>hello {{ product.id }}</h1>
+    <v-card>
+
+    </v-card>
 </template>

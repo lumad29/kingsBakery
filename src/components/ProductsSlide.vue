@@ -1,6 +1,8 @@
 <script setup>
+import ProductsSlideSlider from './ProductsSlideSlider.vue';
 
-const model = defineModel() // el v-model se recibe con defineModel()
+
+const activeProductModel = defineModel() // el v-model se recibe con defineModel(
 
 const props = defineProps({
     products: {
@@ -11,16 +13,16 @@ const props = defineProps({
 
 // computed properties
 const selectedProduct = computed(() => {
-    return model.value !== null ? props.products[model.value].name : ''
+    return activeProductModel.value !== null ? props.products[activeProductModel.value].name : ''
 })
 
 const selectedProductText = computed(() => {
-    return props.products[model.value].text
+    return props.products[activeProductModel.value].text
 })
 
 
 const selectedProductId = computed(() => {
-    return props.products[model.value].id
+    return props.products[activeProductModel.value].id
 })
 
 </script>
@@ -29,24 +31,10 @@ const selectedProductId = computed(() => {
     <v-card color="#37474F" rounded="0" class="pt-16" flat>
         <v-sheet class=" mx-auto mt-18" elevation="0" max-width="1000" color="#37474F">
 
-            <v-slide-group v-model="model" class="pa-4" show-arrows mandatory center-active>
-                <v-slide-group-item v-for="product in products" :key="product.id" v-slot="{ isSelected, toggle }">
-
-                    <v-card :class="['ma-2']" height="400" width="300" @click="toggle">
-
-                        <v-img :src="product.src" height="100%" cover
-                            :gradient="!isSelected ? 'to bottom, rgba(0,0,0,.6), rgba(0,0,0,.5)' : ''">
-                            <div v-if="product.name && isSelected" class="pa-2 bg-grey text-center">
-                                {{ product.name }}
-                            </div>
-                        </v-img>
-                    </v-card>
-                    <!--:image="product.src"-->
-                </v-slide-group-item>
-            </v-slide-group>
+            <ProductsSlideSlider v-model="activeProductModel" :products />
 
             <v-expand-transition>
-                <v-sheet v-if="model != null" height="200" color="#37474F">
+                <v-sheet v-if="activeProductModel != null" height="200" color="#37474F">
                     <div class="d-flex fill-height align-center justify-center">
                         <v-card :title="selectedProduct" :text="selectedProductText" color="#37474F" elevation="0"
                             max-width="87%">
