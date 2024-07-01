@@ -17,7 +17,7 @@ const props = defineProps({
 
                 <v-img :src="product.src" height="100%" cover
                     :gradient="!isSelected ? 'to bottom, rgba(0,0,0,.6), rgba(0,0,0,.5)' : ''">
-                    <div v-if="product.name && isSelected" class="pa-2 bg-grey text-center">
+                    <div v-if="product.name || isSelected" class="pa-2 bg-grey text-center">
                         {{ product.name }}
                     </div>
                 </v-img>
