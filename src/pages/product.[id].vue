@@ -13,14 +13,14 @@ const selectedProduct = computed(() => {
 
 <template>
     <div class="background-grey">
-        <v-img :src="selectedProduct.pageImg" height="400" cover>
+        <v-img :src="selectedProduct.pageImg" height="400" cover max-height="320">
             <div class="fill-height d-flex align-center justify-center text-white">
                 <h1>{{ selectedProduct.name }}</h1>
             </div>
         </v-img>
         <v-container class="d-flex">
-            <v-row class="mt-5">
-                <v-col v-for="product in selectedProduct.items" cols="6">
+            <v-row class="my-5">
+                <v-col v-for="product in selectedProduct.items" :key="product.id" cols="12" lg="6">
                     <v-card class="mx-auto bg-grey" width="90%" min-height="500">
                         <v-img height="400" :src="product.img" cover></v-img>
                         <v-card-title>

@@ -11,7 +11,11 @@ export const useAppStore = defineStore('app', {
           { id: 1, name: 'Baguette', price: 2, inStock: true, img: '/assets/products/baguette-bread.jpg', description: 'this is a baguette', hello: 'hello baguette',/* ingredients: ['harina', 'agua']*/ },
           { id: 2, name: 'Brioche', price: 3, inStock: true, img: '/assets/products/brioche-bread.jpg', description: 'this is a Brioche', hello: 'hello Brioche',/* ingredients: ['huevo', 'sal']*/ },
           { id: 3, name: 'Focaccia', price: 3, inStock: true, img: '/assets/products/focaccia-bread.jpg', description: 'this is a focaccia', hello: 'hello focaccia', /*ingredients: ['huevo', 'sal']*/ },
-          { id: 4, name: 'Sunflower-seed', price: 3, inStock: true, img: '/assets/products/sunflower-seed-bread.jpg', description: 'this is a focaccia', hello: 'hello focaccia', /*ingredients: ['huevo', 'sal']*/ }
+          { id: 4, name: 'Multigrain', price: 3, inStock: true, img: '/assets/products/multigrain-bread.jpg', description: 'this is a multigrain', hello: 'hello multigrain', /*ingredients: ['huevo', 'sal']*/ },
+          { id: 5, name: 'Ciabatta', price: 3, inStock: true, img: '/assets/products/ciabatta-bread.jpg', description: 'this is a cibatta', hello: 'hello ciabatta', /*ingredients: ['huevo', 'sal']*/ },
+          { id: 6, name: 'Pita', price: 3, inStock: true, img: '/assets/products/pita-bread.jpg', description: 'this is a pita', hello: 'hello pita', /*ingredients: ['huevo', 'sal']*/ },
+          { id: 7, name: 'Pretzel', price: 3, inStock: true, img: '/assets/products/pretzel-bread.jpg', description: 'this is a Pretzel', hello: 'hello Pretzel', /*ingredients: ['huevo', 'sal']*/ },
+          { id: 8, name: 'Hamburger', price: 3, inStock: true, img: '/assets/products/hamburger-bread.webp', description: 'this is a hamburger', hello: 'hello hamburger', /*ingredients: ['huevo', 'sal']*/ }
 
         ],
         pageImg: '/assets/flour.jpeg',
