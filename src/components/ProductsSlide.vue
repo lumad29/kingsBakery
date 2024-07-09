@@ -1,7 +1,6 @@
 <script setup>
 import ProductsSlideSlider from './ProductsSlideSlider.vue';
 
-
 const activeProductModel = defineModel() // el v-model se recibe con defineModel(
 
 const props = defineProps({

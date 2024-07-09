@@ -21,13 +21,13 @@ const selectedProduct = computed(() => {
         <v-container class="d-flex">
             <v-row class="my-5">
                 <v-col v-for="product in selectedProduct.items" :key="product.id" cols="12" lg="6">
-                    <v-card class="mx-auto bg-grey" width="90%" min-height="500">
+                    <v-card class="mx-auto bg-grey" width="90%" min-height="530">
                         <v-img height="400" :src="product.img" cover></v-img>
                         <v-card-title>
                             {{ product.name }}
                         </v-card-title>
 
-                        <v-card-subtitle>
+                        <v-card-subtitle style="white-space: pre-line">
                             {{ product.description }}
                         </v-card-subtitle>
 
