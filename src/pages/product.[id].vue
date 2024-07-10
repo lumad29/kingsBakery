@@ -21,21 +21,19 @@ const selectedProduct = computed(() => {
         <v-container class="d-flex">
             <v-row class="my-5">
                 <v-col v-for="product in selectedProduct.items" :key="product.id" cols="12" lg="6">
-                    <v-card class="mx-auto bg-grey" width="90%" min-height="530">
+                    <v-card class="mx-auto bg-grey" width="90%" min-height="540">
                         <v-img height="400" :src="product.img" cover></v-img>
-                        <v-card-title>
+                        <v-card-title class="custom-title">
                             {{ product.name }}
                         </v-card-title>
 
-                        <v-card-subtitle style="white-space: pre-line">
+                        <v-card-subtitle style=" white-space: pre-line" class="custom-subtitle">
                             {{ product.description }}
                         </v-card-subtitle>
 
-                        <v-card-subtitle v-for="ingrediant in product.ingredients">
+                        <!-- <v-card-subtitle class="text-h1" v-for="ingrediant in product.ingredients">
                             {{ ingrediant }}
-                        </v-card-subtitle>
-
-
+                        </v-card-subtitle> -->
                     </v-card>
                 </v-col>
             </v-row>
@@ -46,5 +44,14 @@ const selectedProduct = computed(() => {
 <style>
 .background-grey {
     background-color: rgb(55, 71, 79)
+}
+
+.custom-title {
+    font-size: 24px !important;
+}
+
+.custom-subtitle {
+    font-size: 17px !important;
+
 }
 </style>

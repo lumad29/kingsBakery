@@ -1,4 +1,17 @@
 <script setup>
+import { useGoTo } from 'vuetify';
+const route = useRoute(); // composable de router
+
+watch(route, (newValue, oldValue) => setTimeout(() => {
+    linkToPage(newValue.hash)
+}, 500));
+// linkToPage(link.to)
+
+const goTo = useGoTo()
+
+const linkToPage = (targetId) => {
+    goTo(targetId)
+}
 
 </script>
 
@@ -49,6 +62,6 @@
     font-weight: 450;
     line-height: 2.2;
     font-size: 1.2rem;
-    color: #a9b4b9;
+    /* color: #d4d8da; */
 }
 </style>

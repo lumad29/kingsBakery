@@ -37,10 +37,12 @@ const selectedProductId = computed(() => {
                     <div class="d-flex fill-height align-center justify-center">
                         <v-card :title="selectedProduct" :text="selectedProductText" color="#37474F" elevation="0"
                             max-width="87%">
+                            <!-- <v-card-text class="custom-text">{{ selectedProductText }}</v-card-text> -->
                             <div class="mx-4">
-                                <router-link class="router-link-custom" :to="`/product/${selectedProductId}`">
-                                    <v-btn variant="outlined" size="small">see all</v-btn>
-                                </router-link>
+
+                                <v-btn variant="outlined" size="small" :to="`/product/${selectedProductId}`">see
+                                    all</v-btn>
+
                             </div>
                         </v-card>
                     </div>
@@ -54,5 +56,9 @@ const selectedProductId = computed(() => {
 .router-link-custom {
     text-decoration: none;
     color: inherit;
+}
+
+.custom-text {
+    font-size: 17px;
 }
 </style>

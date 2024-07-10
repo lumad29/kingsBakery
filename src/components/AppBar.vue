@@ -4,7 +4,7 @@ import { useGoTo } from 'vuetify';
 const drawer = ref(false)
 
 const links = [
-  { to: '#target-home', text: 'Home' },
+  { to: '#target-homex', text: 'Home' }, // no se por que target home es indifernete,y no esta escrito en otro lado  
   { to: '#target-stores', text: 'Stores' },
   { to: '#target-products', text: 'Products' },
   { to: '#target-about', text: 'About' },
@@ -12,12 +12,12 @@ const links = [
 ];
 
 // esto lo usamos para la navegacion hacia abajo. lo sacamos de programatic scrolling example. es un composable
-const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
+// const goTo = useGoTo() // composable que se importa de vuetify, esta automatically available
 
-const linkToPage = (targetId) => {
-  drawer.value = false
-  goTo(targetId) // va hacia. es mi evento con un paraemtro de target
-}
+// const linkToPage = (targetId) => {
+//   drawer.value = false
+//   goTo(targetId) // va hacia. es mi evento con un paraemtro de target
+// }
 
 </script>
 
@@ -35,7 +35,8 @@ const linkToPage = (targetId) => {
 
     <nav class="nav-links nav-links hidden-sm-and-down">
       <!--llamo al evento onclick y le paso el paramtro de link que es mi array de objetos y to que es el el key -->
-      <div v-for="link in links" :key="link.to" @click="linkToPage(link.to)" class="nav-link">{{ link.text }}</div>
+      <div v-for="link in links" :key="link.to" @click="$router.push(`/${link.to}`)" class="nav-link">{{
+    link.text }}</div>
     </nav>
 
   </v-app-bar>

@@ -70,5 +70,6 @@ ul li {
 
 .custom-font {
     line-height: 2.2;
+    font-size: 17px;
 }
 </style>
